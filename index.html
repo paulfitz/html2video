@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>html2video</title>
+<link href="a/main.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="a/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+
+<h1>Hello!</h1>
+
+<script>
+
+document.config = {
+  first: 1,
+  last: 30
+};
+
+document.step = function(frame) {
+  console.log("Frame " + frame);
+  $("h1").html(frame);
+}
+
+</script>
+
+</body>
+</html>
