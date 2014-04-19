@@ -8,8 +8,10 @@ Make a html file, say `index.html`, that does whatever you want.
 Include this javascript somewhere in it:
 ```
 document.config = {
-  first: 1,  // First frame of video
-  last: 30   // Last frame of video
+  first: 1,   // First frame of video
+  last: 30,   // Last frame of video
+  width: 300, // Width in pixels
+  height: 200 // Height in pixels
 };
 
 document.step = function(frame) {

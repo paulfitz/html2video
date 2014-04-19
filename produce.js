@@ -15,12 +15,16 @@ page.onConsoleMessage = function(msg){
 };
 page.open(src, function() {
     var config = page.evaluate(function() { return document.config; });
-    console.log(JSON.stringify(config));
-    for (var i=config.first; i<=config.last; i++) {
-	page.evaluate(function(i) { document.step(i); },i);
-	var zf = ('00000000000'+i).slice(-6);
-	page.render("html2video_" + zf + ".png");
-    }
-    phantom.exit();
+    console.log("config is " + JSON.stringify(config));
+    page.viewportSize = { width: config.width, height: config.height };
+    page.open(src, function() {
+	for (var i=config.first; i<=config.last; i++) {
+	    page.evaluate(function(i) { document.step(i); },i);
+	    var zf = ('00000000000'+i).slice(-6);
+	    page.render("html2video_" + zf + ".png");
+	}
+	phantom.exit();
+    });
 });
+
 

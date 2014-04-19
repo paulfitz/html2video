@@ -8,18 +8,22 @@
 </head>
 <body>
 
+<div class="frame">
 <h1>Hello!</h1>
+</div>
 
 <script>
 
 document.config = {
-  first: 1,
-  last: 30
+  first: 1,   // First frame of video
+  last: 60,    // Last frame of video
+  width: 300, // Width in pixels
+  height: 200 // Height in pixels
 };
 
 document.step = function(frame) {
   console.log("Frame " + frame);
-  $("h1").html(frame);
+  $("h1").html("Frame " + frame);
 }
 
 </script>

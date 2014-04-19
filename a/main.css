@@ -1,3 +1,26 @@
-body { 
-  background: red;
+
+html, body { 
+  background: rgba(0,0,0,0);
+  width: 300px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.frame { 
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 286px;
+  height: 186px;
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+  line-height: 180px;
+}
+
+h1 {
+  display: inline-block; 
+  vertical-align: middle;
+  line-height: 20px;
 }
